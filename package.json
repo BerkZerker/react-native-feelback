@@ -37,7 +37,8 @@
     "clean": "del-cli lib",
     "prepare": "bob build",
     "typecheck": "tsc",
-    "lint": "eslint \"**/*.{js,ts,tsx}\""
+    "lint": "eslint \"**/*.{js,ts,tsx}\"",
+    "release": "yarn prepare && npm publish"
   },
   "keywords": [
     "react-native",
