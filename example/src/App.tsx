@@ -13,7 +13,7 @@ import haptics, {
   setEnabled,
   isEnabled,
   type HapticType,
-} from 'react-native-nitro-haptic';
+} from 'react-native-feelback';
 
 const HAPTIC_TYPES: { type: HapticType; label: string; description: string }[] =
   [
@@ -62,7 +62,7 @@ export default function App() {
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView contentContainerStyle={styles.content}>
-        <Text style={styles.title}>Nitro Haptic</Text>
+        <Text style={styles.title}>Feelback</Text>
         <Text style={styles.subtitle}>
           Haptics supported: {supported ? 'Yes' : 'No'}
         </Text>

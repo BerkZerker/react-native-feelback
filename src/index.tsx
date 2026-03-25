@@ -1,4 +1,4 @@
-import NitroHaptic from './NativeNitroHaptic';
+import Feelback from './NativeFeelback';
 
 export type HapticType =
   | 'tap'
@@ -17,7 +17,7 @@ let _enabled = true;
  */
 export function trigger(type: HapticType): void {
   if (!_enabled) return;
-  NitroHaptic.trigger(type);
+  Feelback.trigger(type);
 }
 
 /** Tap feedback — use for button presses and confirmable actions. */
@@ -57,7 +57,7 @@ export function error(): void {
 
 /** Check if the device supports haptic feedback. */
 export function isSupported(): boolean {
-  return NitroHaptic.isSupported();
+  return Feelback.isSupported();
 }
 
 /** Enable or disable all haptic feedback globally. */

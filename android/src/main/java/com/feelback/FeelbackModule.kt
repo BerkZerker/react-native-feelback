@@ -1,11 +1,11 @@
-package com.nitrohaptic
+package com.feelback
 
 import android.os.Build
 import android.view.HapticFeedbackConstants
 import com.facebook.react.bridge.ReactApplicationContext
 
-class NitroHapticModule(reactContext: ReactApplicationContext) :
-  NativeNitroHapticSpec(reactContext) {
+class FeelbackModule(reactContext: ReactApplicationContext) :
+  NativeFeelbackSpec(reactContext) {
 
   override fun trigger(type: String) {
     val activity = currentActivity ?: return
@@ -64,6 +64,6 @@ class NitroHapticModule(reactContext: ReactApplicationContext) :
   }
 
   companion object {
-    const val NAME = NativeNitroHapticSpec.NAME
+    const val NAME = NativeFeelbackSpec.NAME
   }
 }

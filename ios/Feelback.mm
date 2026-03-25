@@ -1,7 +1,8 @@
-#import "NitroHaptic.h"
+#import "Feelback.h"
 #import <UIKit/UIKit.h>
+#import <CoreHaptics/CoreHaptics.h>
 
-@implementation NitroHaptic
+@implementation Feelback
 
 - (void)trigger:(NSString *)type {
   dispatch_async(dispatch_get_main_queue(), ^{
@@ -43,21 +44,18 @@
 }
 
 - (NSNumber *)isSupported {
-  // All iPhones since iPhone 7 (2016) support the Taptic Engine.
-  // UIFeedbackGenerator silently no-ops on unsupported devices (iPad without haptics).
-  // We check for the presence of the feedback generator API, which is iOS 10+.
-  return @(YES);
+  return @([CHHapticEngine capabilitiesForHardware].supportsHaptics);
 }
 
 - (std::shared_ptr<facebook::react::TurboModule>)getTurboModule:
     (const facebook::react::ObjCTurboModule::InitParams &)params
 {
-    return std::make_shared<facebook::react::NativeNitroHapticSpecJSI>(params);
+    return std::make_shared<facebook::react::NativeFeelbackSpecJSI>(params);
 }
 
 + (NSString *)moduleName
 {
-  return @"NitroHaptic";
+  return @"Feelback";
 }
 
 @end

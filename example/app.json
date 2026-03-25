@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "NitroHaptic Example",
-    "slug": "react-native-nitro-haptic-example",
+    "name": "Feelback Example",
+    "slug": "react-native-feelback-example",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -13,7 +13,7 @@
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "nitrohaptic.example"
+      "bundleIdentifier": "feelback.example"
     },
     "android": {
       "adaptiveIcon": {
@@ -22,7 +22,7 @@
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
       },
-      "package": "nitrohaptic.example"
+      "package": "feelback.example"
     },
     "web": {
       "favicon": "./assets/favicon.png"

@@ -1,4 +1,4 @@
-package com.nitrohaptic
+package com.feelback
 
 import com.facebook.react.BaseReactPackage
 import com.facebook.react.bridge.NativeModule
@@ -7,10 +7,10 @@ import com.facebook.react.module.model.ReactModuleInfo
 import com.facebook.react.module.model.ReactModuleInfoProvider
 import java.util.HashMap
 
-class NitroHapticPackage : BaseReactPackage() {
+class FeelbackPackage : BaseReactPackage() {
   override fun getModule(name: String, reactContext: ReactApplicationContext): NativeModule? {
-    return if (name == NitroHapticModule.NAME) {
-      NitroHapticModule(reactContext)
+    return if (name == FeelbackModule.NAME) {
+      FeelbackModule(reactContext)
     } else {
       null
     }
@@ -18,9 +18,9 @@ class NitroHapticPackage : BaseReactPackage() {
 
   override fun getReactModuleInfoProvider() = ReactModuleInfoProvider {
     mapOf(
-      NitroHapticModule.NAME to ReactModuleInfo(
-        name = NitroHapticModule.NAME,
-        className = NitroHapticModule.NAME,
+      FeelbackModule.NAME to ReactModuleInfo(
+        name = FeelbackModule.NAME,
+        className = FeelbackModule.NAME,
         canOverrideExistingModule = false,
         needsEagerInit = false,
         isCxxModule = false,

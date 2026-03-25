@@ -16,7 +16,7 @@ import haptics, {
 const mockTrigger = jest.fn();
 const mockIsSupported = jest.fn(() => true);
 
-jest.mock('../NativeNitroHaptic', () => ({
+jest.mock('../NativeFeelback', () => ({
   __esModule: true,
   default: {
     trigger: (...args: unknown[]) => mockTrigger(...args),

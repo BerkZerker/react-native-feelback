@@ -1,5 +1,5 @@
 {
-  "name": "react-native-nitro-haptic",
+  "name": "react-native-feelback",
   "version": "0.1.0",
   "description": "Unified semantic haptics for React Native — one API, best-in-class feedback on both iOS and Android",
   "main": "./lib/module/index.js",
@@ -32,7 +32,7 @@
     "!**/.*"
   ],
   "scripts": {
-    "example": "yarn workspace react-native-nitro-haptic-example",
+    "example": "yarn workspace react-native-feelback-example",
     "test": "jest",
     "clean": "del-cli lib",
     "prepare": "bob build",
@@ -51,14 +51,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BerkZerker/react-native-nitro-haptic.git"
+    "url": "git+https://github.com/BerkZerker/react-native-feelback.git"
   },
   "author": "Sam <sam@example.com> (https://github.com/BerkZerker)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/BerkZerker/react-native-nitro-haptic/issues"
+    "url": "https://github.com/BerkZerker/react-native-feelback/issues"
   },
-  "homepage": "https://github.com/BerkZerker/react-native-nitro-haptic#readme",
+  "homepage": "https://github.com/BerkZerker/react-native-feelback#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
@@ -119,11 +119,11 @@
     ]
   },
   "codegenConfig": {
-    "name": "NitroHapticSpec",
+    "name": "FeelbackSpec",
     "type": "modules",
     "jsSrcsDir": "src",
     "android": {
-      "javaPackageName": "com.nitrohaptic"
+      "javaPackageName": "com.feelback"
     }
   },
   "prettier": {
